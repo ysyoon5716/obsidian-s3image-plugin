@@ -66,13 +66,17 @@ export default class MyPlugin extends Plugin {
 		const fileExtension = file.name.split('.').pop();
 		const fileName = moment().format('YYYYMMDDHHmmssSS') + '.' + fileExtension;
 
+		const arrayBuffer = await file.arrayBuffer();
+		const fileBuffer = Buffer.from(arrayBuffer);
+
 		const params = {
 			Bucket: this.settings.bucket,
 			Key: fileName,
-			Body: file,
+			Body: fileBuffer,
 			ContentType: file.type,
 		};
 
+		console.log(typeof file);
 		const result = await this.s3.send(new PutObjectCommand(params));
 		const url = `https://${this.settings.bucket}.s3.${this.settings.region}.amazonaws.com/${fileName}`;
 		return url

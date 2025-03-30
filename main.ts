@@ -96,7 +96,7 @@ class MySettingTab extends PluginSettingTab {
 		const {containerEl} = this;
 
 		containerEl.empty();
-		containerEl.createEl('h2', {text: 'AWS S3 Bucket Settings'});
+		containerEl.createEl('h2', {text: 'AWS S3 Configuration'});
 
 		new Setting(containerEl)
 			.setName('Access Key ID')

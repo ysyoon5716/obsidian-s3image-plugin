@@ -76,7 +76,6 @@ export default class MyPlugin extends Plugin {
 			ContentType: file.type,
 		};
 
-		console.log(typeof file);
 		const result = await this.s3.send(new PutObjectCommand(params));
 		const url = `https://${this.settings.bucket}.s3.${this.settings.region}.amazonaws.com/${fileName}`;
 		return url

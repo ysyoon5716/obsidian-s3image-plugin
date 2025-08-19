@@ -58,8 +58,8 @@ export default class MyPlugin extends Plugin {
 		for (let i = 0; i < files.length; i += 1) {
 			const file = files[i];
 			const url = await this.uploadFile(file);
-			// editor.replaceSelection(`![](${url})`);
-			editor.replaceSelection(`<img src=${url} style="width: 30rem; display: block; margin-left: auto; margin-right: auto">`);
+			editor.replaceSelection(`![](${url})`);
+			// editor.replaceSelection(`<img src=${url} style="width: 30rem; display: block; margin-left: auto; margin-right: auto">`);
 		} 
 	}
 

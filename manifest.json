@@ -1,6 +1,6 @@
 {
-	"id": "obsidian-s3image-plugin",
-	"name": "s3image",
+	"id": "Obsidian S3 Image",
+	"name": "Obsidian S3 Image",
 	"version": "1.0.0",
 	"minAppVersion": "0.15.0",
 	"description": "Upload images to AWS S3",
